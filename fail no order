@@ -1,0 +1,60 @@
+            public void SlComparerTestForSameNodeNoOrder(SinglyLinkedList slkek1, SinglyLinkedList slkek2)
+            {
+                List<String> gg = new List<string>();
+                int z = 0;
+                if (slkek1.Count != slkek2.Count)
+                {
+                    Console.WriteLine("(SAME NODE SAME ORDER)The two singly linked list have same Content: [False]");
+                }
+                if (slkek1.Count == slkek2.Count)
+                {
+                    var tempogg = slkek1.Head;
+                    for (int i = 0; i < slkek1.Count; i++)
+                    {
+                        gg.Add(tempogg.Data);
+                        tempogg = tempogg.Next;
+                    }
+                    var duplicateItems = gg.GroupBy(x => x).Where(x => x.Count() > 1).Select(x => x.Key);
+
+                    duplicateItems.Where()
+                    
+
+
+
+                    for (int i = 0; i < gg.Count; i++)
+                    {
+
+                        Console.WriteLine(gg[i]);
+                    }
+                }
+
+                //WRONG CANT WORK PROPERLY ON DUPLICATE NODES
+                //if(slkek1.Count == slkek2.Count)
+                //{ 
+                //var repeatance = slkek2.Head;
+                //Node kektemp = slkek1.Head;
+                //Node kektemp2 = slkek2.Head;
+                //while (kektemp != null && kektemp2 !=null )
+                //{
+                //    if (kektemp.Data == kektemp2.Data)
+                //    {
+                //        kektemp = kektemp.Next;
+                //        kektemp2 = repeatance;
+                //        z++;
+                //    }
+                //    else
+                //    {
+                //        kektemp2 = kektemp2.Next;
+                //    }                
+                //}
+                //if (z == slkek1.Count)
+                //{
+                //    Console.WriteLine( z +
+                //                      "(SAME NODE NOT SAME ORDER)The two singly linked list have same Content: [True] ");
+                //}
+                //else
+                //{
+                //    Console.WriteLine( z +
+                //        "(SAME NODE NOT SAME ORDER)The two singly linked list have same Content: [False]");
+                //}
+                }
